@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&display=swap");
+@import './variables';
+
+* {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  color: $fontColorMajor;
+  font-family: "EB Garamond", serif;
+  font-size: 2.5rem;
+}
+a {
+  color: $fontColorWhite;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 50px;
+}
+h2 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+#iconAbout{
+  fill: $fontColorWhite;
+}

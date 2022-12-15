@@ -1,0 +1,93 @@
+ @import './variables';
+ @import './initial.scss';
+ @import './header';
+ @import './about';
+ @import './portfolio';
+ @import './blog.scss';
+
+.right {
+  transform: translateX(300px);
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+}
+.left {
+  transform: translateX(-300px);
+  opacity: 0;
+  transition: 0.8s ease-in-out all;
+}
+
+.visible {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+.caption {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.division {
+  width: 70px;
+  border-bottom: solid $fontColorMajor 4px;
+  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#canvasIndex {
+  position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+}
+
+.description {
+  position: relative;
+  height: 100vh;
+  
+
+  &-text {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    
+
+    & p {
+      color: $fontColorWhite;
+      font-size:2.2rem;
+    }
+    & p:first-child {
+      margin-bottom: 30px;
+      
+    }
+
+    & p span {
+      color: $paleta_color_2;
+      font-size:2.2rem;
+    }
+
+    &-button {
+      font-size: 1.5rem;
+      align-items: center;
+      display: flex;
+      height: 60px;
+      justify-content: center;
+      width: 200px;
+      margin: auto;
+      color: $fontColorWhite;
+      border: solid $fontColorWhite 2px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $paleta_color_1;
+        border-color: $paleta_color_1;
+      }
+    }
+  }
+}

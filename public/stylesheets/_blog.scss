@@ -1,0 +1,218 @@
+@import './variables';
+.blog {
+  background-color: white;
+  color: $fontColorBlack;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 50px;
+  padding-bottom: 300px;
+
+  & .division{
+    border-bottom: solid $fontColorBlack 4px;
+  }
+
+  &-grid {
+    width: 100%;
+    height: 650px;
+    display: grid;
+    grid-template-columns: 3fr 0.2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2.5fr 0.2fr 1fr 2.5fr;
+
+    &-item {
+      background-color: inherit;
+      border: solid 2px $fontColorBlack;
+      border-radius: 25px;
+      display: flex;
+      flex-direction: column;
+      
+      
+      opacity: 0;
+      transition: 0.7s ease-in-out all;
+      transform: scale(0.8);
+      
+      &-division{
+        border-bottom: solid 2px $fontColorBlack;
+        justify-self: start;
+        //background-color: $paleta_color_4;
+
+        & div{
+          width: 1rem;
+          height: 1rem;
+          background: $paleta_color_1;
+          border-radius: 50%;
+          margin: 0.5rem auto 0.5rem 10px;
+          position: relative;
+          &::before{
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            content: '';
+            left: 1.5rem;
+            border-radius: 50%;
+            background-color: $paleta_color_1;
+          }
+          &::after{
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            content: '';
+            left: 3rem;
+            border-radius: 50%;
+            background-color: $paleta_color_1;
+          }
+        }
+      }
+      &-title{
+        font-weight: bolder;
+        font-size: 1.5rem;
+        margin: 10px auto 0px 10px;
+      }
+      &-paragraph{
+        text-align:start;
+        font-size: 1.3rem;
+        margin: 10px;
+      }
+
+      &-botton{
+        color: #000;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin: auto 50px 15px auto;
+        position: relative;
+        
+        
+
+        &::before{
+          position: absolute;
+          content: '';
+          right: -25px;
+          bottom: 0.3rem;
+          border-bottom: 0.5rem solid transparent;
+          border-left: 0.5rem solid $fontColorBlack;
+          border-top: 0.5rem solid transparent;
+        }
+        &::after{
+          position: absolute;
+          content: '';
+          width: 10px;
+          height: 20px;
+          right: -18px;
+          bottom: 11px;
+          border-bottom: solid 0.2rem $fontColorBlack;
+        }
+        &:hover{
+          right: -10px;
+        }
+      }
+    }
+
+    &-title {
+      position: relative;
+      &-text{
+        font-size: 2.5rem;
+        font-weight: bolder;
+        text-align: left;
+      }
+      &-icon{
+        color: #000;
+        bottom: 80px;
+        left: 0;
+        width: 5rem;
+      }
+    }
+
+    &-botton {
+      display: grid;
+      place-content: center;
+      grid-row: 6/5;
+      font-weight: bolder;
+      
+
+      &-note {
+        background: $fontColorBlack;
+        position: relative;
+        width: 150px;
+        height: 35px;
+        
+        &::after{
+          text-align: center;
+          font-size: 1.4rem;
+          color: $fontColorBlack;
+          background: white;
+          position: absolute;
+          content: 'Visita Mas Temas';
+          width: 100%;
+          height: 100%;
+          bottom: 5px;
+          left: -10px;
+          border: solid 2px rgb(255, 255, 255);
+          box-shadow: #000 1px 1px 1px 0;
+          transition: all 0.1s;
+          //  bottom: 0px;
+          //  left: 0px;
+        } 
+        &:hover::after{
+          bottom: 1px;
+          left: -3px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.nota1 {
+    align-self: center;
+    height: 80%;
+    grid-area: 1 / 4 / 3 / 7;
+}
+
+.nota2 {
+    align-self: center;
+    height: 90%;
+  grid-area: 2 / 1 / 5 / 2;
+}
+.nota3 {
+  grid-area: 4 / 3 / 6 / 6;
+}
+
+@media screen and (max-width: 850px){
+  .blog-grid-item{
+    margin-bottom: 20px;
+  }
+  .blog-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blog-grid-title{
+    margin-bottom: 20px;
+    order: 1;
+  }
+  .nota1{
+    order: 2;
+  }
+  .nota2{
+    order: 3;
+  }
+  .nota3{
+    order: 4;
+  }
+  .blog-grid-botton{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    order: 5;
+  }
+  
+}
+@media screen and (max-width: 600px){
+  .blog{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

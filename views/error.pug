@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title= title
+  body()
+    - const menssage = "Porfolio" 
+    h1= menssage
+    h2 error
+    //- pre #{error.stack}
+    - const employees = ['Angela', 'Jim', 'Nilson', 'Simone']
+    ul 
+    each employee in employees
+      li= employee

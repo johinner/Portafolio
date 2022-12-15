@@ -1,0 +1,31 @@
+@import './variables';
+#header {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  border-bottom: solid $paleta_color_1 3px;
+  background: $paleta_color_3;
+  text-align: center;
+}
+.nav {
+  display: flex;
+  margin: auto;
+  margin-left: 0;
+
+  &-link {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    &:hover {
+      color: $paleta_color_2;
+    }
+  }
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
