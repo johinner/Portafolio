@@ -1,9 +1,9 @@
- @import './variables';
- @import './initial.scss';
- @import './header';
- @import './about';
- @import './portfolio';
- @import './blog.scss';
+@import "./variables";
+@import "./initial.scss";
+@import "./header";
+@import "./about";
+@import "./portfolio";
+@import "./blog.scss";
 
 .right {
   transform: translateX(300px);
@@ -28,7 +28,7 @@
 
 .division {
   width: 70px;
-  border-bottom: solid $fontColorMajor 4px;
+  border-bottom: solid $color-fg-default 4px;
   margin-bottom: 100px;
   margin-top: 20px;
   margin-left: auto;
@@ -37,16 +37,16 @@
 
 #canvasIndex {
   position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
 }
 
 .description {
   position: relative;
   height: 100vh;
-  
 
   &-text {
     position: absolute;
@@ -56,37 +56,36 @@
     bottom: 0;
     margin: auto;
     text-align: center;
-    
 
     & p {
       color: $fontColorWhite;
-      font-size:2.2rem;
+      font-size: 2.2rem;
     }
     & p:first-child {
       margin-bottom: 30px;
-      
     }
 
     & p span {
       color: $paleta_color_2;
-      font-size:2.2rem;
+      font-size: 2.2rem;
     }
 
     &-button {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       align-items: center;
       display: flex;
       height: 60px;
       justify-content: center;
       width: 200px;
       margin: auto;
-      color: $fontColorWhite;
-      border: solid $fontColorWhite 2px;
+      font-weight: 600;
+      color: $color-fg-default;
+      border: solid $paleta_button 1px;
       cursor: pointer;
+      transition: all 0.2s ease-in;
 
       &:hover {
-        background-color: $paleta_color_1;
-        border-color: $paleta_color_1;
+        background-color: $paleta_button;
       }
     }
   }

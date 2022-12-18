@@ -1,182 +1,188 @@
-@import './variables';
-.about{
+@import "./variables";
+.about {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  text-align: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 100px;
+  background-color: $paleta_fondo_1;
+  color: $color-fg-default;
+
+  &-information1 {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 15px;
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      margin: 7px;
+      margin-bottom: 20px;
+
+      &-icon {
+        clip-path: polygon(
+          25% 0%,
+          75% 0%,
+          100% 50%,
+          75% 100%,
+          25% 100%,
+          0% 50%
+        );
+        background: rgb(33, 38, 45);
+        width: 5.5rem;
+        height: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        & svg {
+          width: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+      &-title {
+        font-size: 2rem;
+        text-align: center;
+      }
+      &-text {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &-information2 {
     display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-    text-align: center;
-    margin-left: 15%;
-    margin-right:15%;
-    margin-bottom: 100px;
+    padding-top: 50px;
 
-    &-information1{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        column-gap: 15px;
-        
-        &-content{
-            display: flex;
-            flex-direction: column;
-            margin: 7px;
-            margin-bottom: 20px;
-
-            &-icon{
-                clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-                background: $paleta_color_1;
-                width: 5.5rem;
-                height: 5rem;
-                margin-left: auto;
-                margin-right: auto;
-                position: relative;
-                & svg{
-                    width: 50%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    margin: auto;
-                }
-            }
-            &-title{
-                font-size: 2rem;
-                text-align: center;
-            }
-            &-text{
-                padding-left: 10px;
-                padding-right: 10px;
-                font-size: 1.2rem;
-                text-align: center;
-            }
-
-        }
-
+    &-content {
+      width: 50%;
+      padding-left: 50px;
+      padding-right: 50px;
+      &-icon {
+        margin-left: auto;
+        margin-right: auto;
+        width: $hexagonSize;
+        height: $hexagonSize;
+      }
+      &-title {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 18pt;
+        text-align: center;
+      }
+      &-text {
+        font-size: 12pt;
+        text-align: center;
+      }
     }
 
-    &-information2{
+    &-content2 {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin-right: 30px;
+      font-size: 15pt;
+
+      &-item {
         display: flex;
-        padding-top: 50px;
+        width: 100%;
+        height: 28px;
+        background: $barra_color;
+        margin-bottom: 15px;
+        border: solid 0.3px rgba(147, 147, 151, 0.377);
 
-        &-content{
-            width: 50%;
-            padding-left: 50px;
-            padding-right: 50px;
-            &-icon{
-                margin-left: auto;
-                margin-right: auto;
-                width: $hexagonSize;
-                height: $hexagonSize;
-            }
-            &-title{
-                padding-top: 20px;
-                padding-bottom: 20px;
-                font-size: 18pt;
-                text-align: center;
-            }
-            &-text{
-                font-size: 12pt;
-                text-align: center;
-            }
-
-        }
-
-        &-content2{
+        &-bar {
+          height: 28px;
+          background: $paleta_color_4;
+          &-text {
             position: relative;
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            margin-right: 30px;
-            font-size: 15pt;
-
-            &-item{
-                display: flex;
-                width: 100%;
-                height: 28px;
-                background: $barra_color;
-                margin-bottom: 15px;
-                
-                &-bar{
-                    height: 28px;
-                    background: $paleta_color_4;
-                    &-text{
-                        position: relative;
-                        height: 28px;
-                        width: 100px;
-                        background: $paleta_color_1;
-                        color: $fontColorWhite;
-                        text-align: center;
-                    }
- 
-                }
-                &-porcentage{
-                    position: absolute;
-                    right: 0;
-                    padding-right: 10px;
-                }
-            }
-           
+            height: 28px;
+            width: 100px;
+            background: $paleta_color_1;
+            color: $fontColorWhite;
+            text-align: center;
+          }
         }
+        &-porcentage {
+          position: absolute;
+          right: 0;
+          padding-right: 10px;
+          color: $paleta_button;
+        }
+      }
     }
+  }
 }
 
-.hexagon{
-    position: relative;
-    width: 60%;
-    height: 100%;
-    background:  $paleta_color_1;
-    margin-left: auto;
-    margin-right: auto;
-    &::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: calc(($hexagonSize/3.3)* -1);
-        width: 0;
-        height: 0;
-        border-right: calc($hexagonSize/3.3) solid $paleta_color_1;
-        border-top: calc($hexagonSize/2)  solid transparent;
-        border-bottom: calc($hexagonSize/2) solid transparent;
-    }
-    &::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        right: calc(($hexagonSize/3.3)* -1);
-        width: 0px;
-        height: 0px;
-        border-left: calc($hexagonSize/3.3) solid  $paleta_color_1;
-        border-top: calc($hexagonSize/2) solid transparent;
-        border-bottom: calc($hexagonSize/2) solid transparent;
-    }
+.hexagon {
+  position: relative;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  // &::before{
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: calc(($hexagonSize/3.3)* -1);
+  //     width: 0;
+  //     height: 0;
+  //     border-right: calc($hexagonSize/3.3) solid $paleta_color_1;
+  //     border-top: calc($hexagonSize/2)  solid transparent;
+  //     border-bottom: calc($hexagonSize/2) solid transparent;
+  // }
+  // &::after{
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     right: calc(($hexagonSize/3.3)* -1);
+  //     width: 0px;
+  //     height: 0px;
+  //     border-left: calc($hexagonSize/3.3) solid  $paleta_color_1;
+  //     border-top: calc($hexagonSize/2) solid transparent;
+  //     border-bottom: calc($hexagonSize/2) solid transparent;
+  // }
 }
 
-@media screen and (max-width: 960px){
-    .about{
-        margin-left: 10px;
-        margin-right: 10px;
+@media screen and (max-width: 960px) {
+  .about {
+    margin-left: 10px;
+    margin-right: 10px;
 
-        &-information1{
-            grid-template-columns: 50% 50%;
-            row-gap: 10px;
-        }
-
-        &-information2{
-            flex-direction: column;
-
-            &-content{
-                margin-left: auto;
-                margin-right: auto;
-                width: 90%;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-bottom: 30px;
-
-            }
-
-            &-content2{
-                margin-left: auto;
-                margin-right: auto;
-                width: 90%;
-            }
-        }
+    &-information1 {
+      grid-template-columns: 50% 50%;
+      row-gap: 10px;
     }
+
+    &-information2 {
+      flex-direction: column;
+
+      &-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 30px;
+      }
+
+      &-content2 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+    }
+  }
 }

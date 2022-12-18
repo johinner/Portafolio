@@ -2,15 +2,23 @@
 $fontColorWhite: white;
 $fontColorBlack: black;
 $fontColorMajor: #3b3d41;
+$color-fg-default: #c9d1d9;
 
 // color
-$paleta_color_1: #04c2c9;
+$paleta_color_1: rgb(33, 38, 45);
 $paleta_color_2: #e31b6d;
 $paleta_color_3: #1b242f;
-$paleta_color_4: rgb(0, 161, 167);
+$paleta_color_4: #1f6feb;
+$paleta_fondo_1: rgb(13, 17, 23);
+$paleta_fondo_2: rgb(22, 27, 34);
+$paleta_menu: rgb(22, 27, 34);
+$paleta_button: rgb(247, 129, 102);
 
-$barra_color: #eeeeee;
-$colorSectionNote: #4c3a69;
+$barra_color: rgb(22, 27, 34);
 
 // measures
 $hexagonSize: 220px;
+
+// shadow
+$color-shadow-medium: 0 3px 6px #010409;
+$color-shadow-large: 0 8px 24px #010409;

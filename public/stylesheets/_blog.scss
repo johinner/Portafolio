@@ -1,7 +1,7 @@
-@import './variables';
+@import "./variables";
 .blog {
-  background-color: white;
-  color: $fontColorBlack;
+  background-color: $paleta_fondo_1;
+  color: $color-fg-default;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -10,8 +10,8 @@
   padding-top: 50px;
   padding-bottom: 300px;
 
-  & .division{
-    border-bottom: solid $fontColorBlack 4px;
+  & .division {
+    border-bottom: solid $color-fg-default 4px;
   }
 
   &-grid {
@@ -22,88 +22,86 @@
     grid-template-rows: 1fr 2.5fr 0.2fr 1fr 2.5fr;
 
     &-item {
-      background-color: inherit;
-      border: solid 2px $fontColorBlack;
+      background-color: rgb(48, 54, 61);
+      border: 1px solid rgba(134, 134, 134, 0.781);
+      box-shadow: $color-shadow-medium;
       border-radius: 25px;
       display: flex;
       flex-direction: column;
-      
-      
+
       opacity: 0;
       transition: 0.7s ease-in-out all;
       transform: scale(0.8);
-      
-      &-division{
+
+      &-division {
         border-bottom: solid 2px $fontColorBlack;
         justify-self: start;
-        //background-color: $paleta_color_4;
 
-        & div{
+        & div {
           width: 1rem;
           height: 1rem;
-          background: $paleta_color_1;
+          background: #1f6feb;
           border-radius: 50%;
           margin: 0.5rem auto 0.5rem 10px;
           position: relative;
-          &::before{
+          &::before {
             position: absolute;
             width: 1rem;
             height: 1rem;
-            content: '';
+            content: "";
             left: 1.5rem;
             border-radius: 50%;
-            background-color: $paleta_color_1;
+            background-color: #1f6feb;
           }
-          &::after{
+          &::after {
             position: absolute;
             width: 1rem;
             height: 1rem;
-            content: '';
+            content: "";
             left: 3rem;
             border-radius: 50%;
-            background-color: $paleta_color_1;
+            background-color: #1f6feb;
           }
         }
       }
-      &-title{
+      &-title {
         font-weight: bolder;
         font-size: 1.5rem;
         margin: 10px auto 0px 10px;
       }
-      &-paragraph{
-        text-align:start;
+      &-paragraph {
+        text-align: start;
         font-size: 1.3rem;
         margin: 10px;
       }
 
-      &-botton{
-        color: #000;
+      &-botton {
+        color: $color-fg-default;
         font-size: 1.4rem;
         font-weight: 700;
         margin: auto 50px 15px auto;
         position: relative;
-        
-        
+        border-bottom: solid 1px $paleta_button;
 
-        &::before{
+        &::before {
           position: absolute;
-          content: '';
+          content: "";
           right: -25px;
           bottom: 0.3rem;
           border-bottom: 0.5rem solid transparent;
-          border-left: 0.5rem solid $fontColorBlack;
+          border-left: 0.5rem solid $paleta_button;
           border-top: 0.5rem solid transparent;
         }
-        &::after{
+        &::after {
           position: absolute;
-          content: '';
+          content: "";
           width: 10px;
           height: 20px;
           right: -18px;
           bottom: 11px;
-          border-bottom: solid 0.2rem $fontColorBlack;
+          border-bottom: solid 0.2rem $paleta_button;
         }
-        &:hover{
+        &:hover {
           right: -10px;
         }
       }
@@ -111,12 +109,12 @@
 
     &-title {
       position: relative;
-      &-text{
+      &-text {
         font-size: 2.5rem;
         font-weight: bolder;
         text-align: left;
       }
-      &-icon{
+      &-icon {
         color: #000;
         bottom: 80px;
         left: 0;
@@ -129,32 +127,29 @@
       place-content: center;
       grid-row: 6/5;
       font-weight: bolder;
-      
 
       &-note {
-        background: $fontColorBlack;
+        background: $paleta_color_4;
         position: relative;
         width: 150px;
         height: 35px;
-        
-        &::after{
+
+        &::after {
           text-align: center;
           font-size: 1.4rem;
-          color: $fontColorBlack;
-          background: white;
+          color: $color-fg-default;
+          background: $fontColorMajor;
           position: absolute;
-          content: 'Visita Mas Temas';
+          content: "Mas Temas";
           width: 100%;
           height: 100%;
           bottom: 5px;
           left: -10px;
-          border: solid 2px rgb(255, 255, 255);
+          border: solid 1px rgba(255, 255, 255, 0.349);
           box-shadow: #000 1px 1px 1px 0;
           transition: all 0.1s;
-          //  bottom: 0px;
-          //  left: 0px;
-        } 
-        &:hover::after{
+        }
+        &:hover::after {
           bottom: 1px;
           left: -3px;
         }
@@ -163,55 +158,52 @@
   }
 }
 
-
-
 .nota1 {
-    align-self: center;
-    height: 80%;
-    grid-area: 1 / 4 / 3 / 7;
+  align-self: center;
+  height: 80%;
+  grid-area: 1 / 4 / 3 / 7;
 }
 
 .nota2 {
-    align-self: center;
-    height: 90%;
+  align-self: center;
+  height: 90%;
   grid-area: 2 / 1 / 5 / 2;
 }
 .nota3 {
   grid-area: 4 / 3 / 6 / 6;
 }
 
-@media screen and (max-width: 850px){
-  .blog-grid-item{
+@media screen and (max-width: 850px) {
+  .blog-grid-item {
     margin-bottom: 20px;
   }
-  .blog-grid{
+  .blog-grid {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .blog-grid-title{
+  .blog-grid-title {
     margin-bottom: 20px;
     order: 1;
   }
-  .nota1{
+  .nota1 {
     order: 2;
   }
-  .nota2{
+  .nota2 {
     order: 3;
   }
-  .nota3{
+  .nota3 {
     order: 4;
   }
-  .blog-grid-botton{
+  .blog-grid-botton {
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
     order: 5;
   }
-  
 }
-@media screen and (max-width: 600px){
-  .blog{
+@media screen and (max-width: 600px) {
+  .blog {
     padding-left: 10px;
     padding-right: 10px;
   }
